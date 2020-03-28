@@ -18,6 +18,5 @@ object Conjuration {
 
     @Environment(EnvType.CLIENT)
     fun initClient() {
-
     }
 }

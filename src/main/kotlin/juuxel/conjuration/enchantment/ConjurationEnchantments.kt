@@ -18,12 +18,7 @@ object ConjurationEnchantments {
 
     val SWIFTNESS: Enchantment = SwiftnessCurseEnchantment()
 
-    val FROST: Enchantment = EffectEnchantment(
-        Enchantment.Weight.UNCOMMON,
-        EnchantmentTarget.WEAPON,
-        arrayOf(EquipmentSlot.MAINHAND),
-        ConjurationEffects.FROST
-    )
+    val FROST: Enchantment = FrostEnchantment()
 
     fun init() {
         register("cobweb", COBWEB)

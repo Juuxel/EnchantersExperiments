@@ -1,11 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "juuxel.innovativeinstruments.mixin",
+  "package": "juuxel.conjuration.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
+    "client.InGameHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1
