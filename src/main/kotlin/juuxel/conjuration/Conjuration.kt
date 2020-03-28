@@ -1,5 +1,6 @@
 package juuxel.conjuration
 
+import juuxel.conjuration.effect.ConjurationEffects
 import juuxel.conjuration.enchantment.ConjurationEnchantments
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
@@ -11,6 +12,7 @@ object Conjuration {
     fun id(path: String): Identifier = Identifier(ID, path)
 
     fun init() {
+        ConjurationEffects.init()
         ConjurationEnchantments.init()
     }
 
