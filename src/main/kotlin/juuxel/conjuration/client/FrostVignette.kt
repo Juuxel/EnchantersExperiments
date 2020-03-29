@@ -1,11 +1,9 @@
 package juuxel.conjuration.client
 
-import com.mojang.blaze3d.platform.GlStateManager
 import com.mojang.blaze3d.systems.RenderSystem
 import juuxel.conjuration.effect.ConjurationEffects
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.render.Tessellator
 import net.minecraft.client.render.VertexFormats
@@ -23,15 +21,6 @@ object FrostVignette {
         val width = client.window.scaledWidth.toDouble()
         val height = client.window.scaledHeight.toDouble()
 
-        /*RenderSystem.pushMatrix()
-        RenderSystem.disableDepthTest()
-        RenderSystem.depthMask(false)
-        RenderSystem.blendFuncSeparate(
-            GlStateManager.SrcFactor.ZERO,
-            GlStateManager.DstFactor.ONE_MINUS_SRC_COLOR,
-            GlStateManager.SrcFactor.ONE,
-            GlStateManager.DstFactor.ZERO
-        )*/
         // 0xABEBF4
         RenderSystem.color4f(1f - 0xAB / 255f, 1f - 0xEB / 255f, 1f - 0xF4 / 255f, 1f)
 
@@ -44,11 +33,5 @@ object FrostVignette {
         buf.vertex(width, 0.0, -90.0).texture(1f, 0f).next()
         buf.vertex(0.0, 0.0, -90.0).texture(0f, 0f).next()
         tessellator.draw()
-
-        /*RenderSystem.enableDepthTest()
-        RenderSystem.depthMask(true)
-        RenderSystem.defaultBlendFunc()
-        RenderSystem.color4f(1f, 1f, 1f, 1f)
-        RenderSystem.popMatrix()*/
     }
 }

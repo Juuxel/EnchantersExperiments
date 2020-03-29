@@ -2,6 +2,7 @@ package juuxel.conjuration
 
 import juuxel.conjuration.effect.ConjurationEffects
 import juuxel.conjuration.enchantment.ConjurationEnchantments
+import juuxel.conjuration.networking.ConjurationNetworking
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.util.Identifier
@@ -14,9 +15,11 @@ object Conjuration {
     fun init() {
         ConjurationEffects.init()
         ConjurationEnchantments.init()
+        ConjurationNetworking.init()
     }
 
     @Environment(EnvType.CLIENT)
     fun initClient() {
+        ConjurationNetworking.initClient()
     }
 }

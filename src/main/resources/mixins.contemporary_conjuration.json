@@ -4,6 +4,7 @@
   "package": "juuxel.conjuration.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "LivingEntityMixin"
   ],
   "client": [
     "client.InGameHudMixin"

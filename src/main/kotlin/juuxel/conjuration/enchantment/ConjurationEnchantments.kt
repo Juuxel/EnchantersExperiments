@@ -17,13 +17,14 @@ object ConjurationEnchantments {
     )
 
     val SWIFTNESS: Enchantment = SwiftnessCurseEnchantment()
-
     val FROST: Enchantment = FrostEnchantment()
+    val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
 
     fun init() {
         register("cobweb", COBWEB)
         register("swiftness", SWIFTNESS)
         register("frost", FROST)
+        register("invulnerability", INVULNERABILITY)
     }
 
     private fun register(name: String, enchantment: Enchantment) =
