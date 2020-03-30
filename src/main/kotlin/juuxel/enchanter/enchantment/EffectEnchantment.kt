@@ -13,7 +13,8 @@ open class EffectEnchantment(
     weight: Weight,
     target: EnchantmentTarget,
     slotTypes: Array<out EquipmentSlot>,
-    private val effect: StatusEffect
+    private val effect: StatusEffect,
+    private val treasure: Boolean = false
 ) : Enchantment(weight, target, slotTypes) {
     override fun getMaximumLevel() = 3
 
@@ -26,4 +27,6 @@ open class EffectEnchantment(
             target.addStatusEffect(StatusEffectInstance(effect, 3.seconds + 3.seconds * (level - 1), 1))
         }
     }
+
+    override fun isTreasure() = treasure
 }
