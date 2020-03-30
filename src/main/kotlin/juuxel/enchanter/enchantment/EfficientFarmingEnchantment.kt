@@ -16,6 +16,9 @@ class EfficientFarmingEnchantment : Enchantment(
     EnchantmentTarget.FISHING_ROD, // irritatered
     arrayOf(EquipmentSlot.MAINHAND)
 ) {
+    // This prevents applying this enchantment to actual fishing rods,
+    // but allows you to enchant hoes with the /enchant command.
+    // The enchanting table still does not give this enchantment.
     override fun isAcceptableItem(stack: ItemStack) = stack.item is HoeItem
 
     companion object {
@@ -25,6 +28,7 @@ class EfficientFarmingEnchantment : Enchantment(
             val hasEnchantment = stack.checkEnchantments { enchantment, _ -> enchantment === EnchanterEnchantments.EFFICIENT_FARMING }
             if (!hasEnchantment) return
 
+            // to match 1.16 yarn (setOffset is a horrible name)
             fun BlockPos.Mutable.move(x: Int, y: Int, z: Int) = setOffset(x, y, z)
 
             val mutable = BlockPos.Mutable(pos)

@@ -9,6 +9,12 @@ import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.effect.StatusEffect
 import net.minecraft.entity.effect.StatusEffectInstance
 
+/**
+ * An enchantment that applies a status effect.
+ *
+ * @property effect the applied effect
+ * @property treasure whether this enchantment is a treasure and does not appear in enchanting tables
+ */
 open class EffectEnchantment(
     weight: Weight,
     target: EnchantmentTarget,
