@@ -1,5 +1,6 @@
 package juuxel.enchanter.enchantment
 
+import juuxel.enchanter.util.checkEnchantments
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.enchantment.Enchantment
@@ -19,8 +20,10 @@ class EfficientFarmingEnchantment : Enchantment(
 
     companion object {
         @JvmStatic
-        fun handleTilling(world: World, pos: BlockPos, tilledBlocks: Map<Block, BlockState>) {
+        fun handleTilling(world: World, pos: BlockPos, stack: ItemStack, tilledBlocks: Map<Block, BlockState>) {
             if (world.isClient) return
+            val hasEnchantment = stack.checkEnchantments { enchantment, _ -> enchantment === EnchanterEnchantments.EFFICIENT_FARMING }
+            if (!hasEnchantment) return
 
             fun BlockPos.Mutable.move(x: Int, y: Int, z: Int) = setOffset(x, y, z)
 

@@ -27,7 +27,7 @@ public class HoeItemMixin {
 
     @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z"))
     private void enchanter_useOnBlock(ItemUsageContext context, CallbackInfoReturnable<ActionResult> info) {
-        EfficientFarmingEnchantment.handleTilling(context.getWorld(), context.getBlockPos(), TILLED_BLOCKS);
+        EfficientFarmingEnchantment.handleTilling(context.getWorld(), context.getBlockPos(), context.getStack(), TILLED_BLOCKS);
     }
 
     @ModifyConstant(method = "useOnBlock", constant = @Constant(intValue = 1))
