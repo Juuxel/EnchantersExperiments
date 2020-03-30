@@ -25,7 +25,6 @@ object EnchanterNetworking {
     }
 
     fun init() {
-
     }
 
     @Environment(EnvType.CLIENT)
