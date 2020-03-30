@@ -8,22 +8,24 @@ import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.util.registry.Registry
 
 object EnchanterEnchantments {
-    val COBWEB: Enchantment = EffectEnchantment(
+    @JvmField val COBWEB: Enchantment = EffectEnchantment(
         Enchantment.Weight.UNCOMMON,
         EnchantmentTarget.WEAPON,
         arrayOf(EquipmentSlot.MAINHAND),
         StatusEffects.SLOWNESS
     )
 
-    val SWIFTNESS: Enchantment = SwiftnessCurseEnchantment()
-    val FROST: Enchantment = FrostEnchantment()
-    val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
+    @JvmField val SWIFTNESS: Enchantment = SwiftnessCurseEnchantment()
+    @JvmField val FROST: Enchantment = FrostEnchantment()
+    @JvmField val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
+    @JvmField val EFFICIENT_FARMING: Enchantment = EfficientFarmingEnchantment()
 
     fun init() {
         register("cobweb", COBWEB)
         register("swiftness", SWIFTNESS)
         register("frost", FROST)
         register("invulnerability", INVULNERABILITY)
+        register("efficient_farming", EFFICIENT_FARMING)
     }
 
     private fun register(name: String, enchantment: Enchantment) =
