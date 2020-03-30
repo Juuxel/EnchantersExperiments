@@ -25,7 +25,7 @@ open class EffectEnchantment(
     override fun getMaximumLevel() = 3
 
     override fun differs(other: Enchantment): Boolean {
-        return other is EffectEnchantment
+        return other !is EffectEnchantment
     }
 
     override fun onTargetDamaged(user: LivingEntity, target: Entity, level: Int) {
