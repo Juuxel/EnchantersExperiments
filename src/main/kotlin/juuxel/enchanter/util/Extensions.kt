@@ -1,4 +1,4 @@
-package juuxel.conjuration.util
+package juuxel.enchanter.util
 
 /** Converts seconds to ticks. */
 val Int.seconds: Int

@@ -1,12 +1,12 @@
-package juuxel.conjuration.effect
+package juuxel.enchanter.effect
 
-import juuxel.conjuration.Conjuration
+import juuxel.enchanter.Enchanter
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.effect.StatusEffect
 import net.minecraft.util.registry.Registry
 
-object ConjurationEffects {
+object EnchanterEffects {
     @JvmField val FROST: StatusEffect = FrostEffect().addAttributeModifier(
         EntityAttributes.MOVEMENT_SPEED,
         "22F011E5-A693-481D-9C6A-AA7C6DB79CFE", // seems to be unique for each effect so I generated one randomly
@@ -22,5 +22,5 @@ object ConjurationEffects {
     }
 
     private fun register(name: String, effect: StatusEffect) =
-        Registry.register(Registry.STATUS_EFFECT, Conjuration.id(name), effect)
+        Registry.register(Registry.STATUS_EFFECT, Enchanter.id(name), effect)
 }

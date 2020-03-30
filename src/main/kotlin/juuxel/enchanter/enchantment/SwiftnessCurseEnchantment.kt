@@ -1,4 +1,4 @@
-package juuxel.conjuration.enchantment
+package juuxel.enchanter.enchantment
 
 import net.minecraft.enchantment.EnchantmentTarget
 import net.minecraft.entity.EquipmentSlot

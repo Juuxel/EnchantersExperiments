@@ -1,7 +1,7 @@
-package juuxel.conjuration.client
+package juuxel.enchanter.client
 
 import com.mojang.blaze3d.systems.RenderSystem
-import juuxel.conjuration.effect.ConjurationEffects
+import juuxel.enchanter.effect.EnchanterEffects
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.client.MinecraftClient
@@ -17,7 +17,7 @@ object FrostVignette {
 
     fun render(entity: Entity?) {
         val client = MinecraftClient.getInstance()
-        if (entity == null || entity !is LivingEntity || !entity.hasStatusEffect(ConjurationEffects.FROST)) return
+        if (entity == null || entity !is LivingEntity || !entity.hasStatusEffect(EnchanterEffects.FROST)) return
         val width = client.window.scaledWidth.toDouble()
         val height = client.window.scaledHeight.toDouble()
 

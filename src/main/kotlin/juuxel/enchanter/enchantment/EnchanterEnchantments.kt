@@ -1,14 +1,13 @@
-package juuxel.conjuration.enchantment
+package juuxel.enchanter.enchantment
 
-import juuxel.conjuration.Conjuration
-import juuxel.conjuration.effect.ConjurationEffects
+import juuxel.enchanter.Enchanter
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.enchantment.EnchantmentTarget
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.effect.StatusEffects
 import net.minecraft.util.registry.Registry
 
-object ConjurationEnchantments {
+object EnchanterEnchantments {
     val COBWEB: Enchantment = EffectEnchantment(
         Enchantment.Weight.UNCOMMON,
         EnchantmentTarget.WEAPON,
@@ -28,5 +27,5 @@ object ConjurationEnchantments {
     }
 
     private fun register(name: String, enchantment: Enchantment) =
-        Registry.register(Registry.ENCHANTMENT, Conjuration.id(name), enchantment)
+        Registry.register(Registry.ENCHANTMENT, Enchanter.id(name), enchantment)
 }

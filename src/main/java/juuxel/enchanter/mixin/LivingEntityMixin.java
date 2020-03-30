@@ -1,7 +1,7 @@
-package juuxel.conjuration.mixin;
+package juuxel.enchanter.mixin;
 
-import juuxel.conjuration.effect.ConjurationEffects;
-import juuxel.conjuration.networking.ConjurationNetworking;
+import juuxel.enchanter.effect.EnchanterEffects;
+import juuxel.enchanter.networking.EnchanterNetworking;
 import net.fabricmc.fabric.api.server.PlayerStream;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -10,7 +10,6 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -38,10 +37,10 @@ public abstract class LivingEntityMixin extends Entity {
     public abstract void setHealth(float health);
 
     @Inject(method = "tryUseTotem", at = @At("HEAD"), cancellable = true)
-    private void conjuration_onTryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> info) {
+    private void enchanter_onTryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> info) {
         if (source.isOutOfWorld()) return;
 
-        if (hasStatusEffect(ConjurationEffects.INVULNERABLE)) {
+        if (hasStatusEffect(EnchanterEffects.INVULNERABLE)) {
             setHealth(1.0f);
             clearStatusEffects();
             addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 900, 1));
@@ -57,7 +56,7 @@ public abstract class LivingEntityMixin extends Entity {
             );
 
             PlayerStream.watching(this).forEach(player -> {
-                ConjurationNetworking.INSTANCE.sendRespawnWithInvulnerability(player, getX(), getY(), getZ());
+                EnchanterNetworking.INSTANCE.sendRespawnWithInvulnerability(player, getX(), getY(), getZ());
             });
 
             // TODO: Sounds/particles

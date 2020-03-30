@@ -1,38 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "contemporary_conjuration",
+  "id": "enchanters_experiments",
   "version": "${version}",
 
-  "name": "Contemporary Conjuration",
+  "name": "Enchanter's Experiments",
   "description": "TODO",
-  "authors": [
-    "Juuz"
-  ],
   "contact": {
-    "sources": "https://github.com/Juuxel/ModFest2020",
-    "issues": "https://github.com/Juuxel/ModFest2020/issues"
+    "sources": "https://github.com/Juuxel/EnchantersExperiments",
+    "issues": "https://github.com/Juuxel/EnchantersExperiments/issues"
   },
 
   "license": "LGPL-3.0-only",
-  "icon": "assets/contemporary_conjuration/icon.png",
+  "icon": "assets/enchanters_experiments/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "juuxel.conjuration.Conjuration::init"
+        "value": "juuxel.enchanter.Enchanter::init"
       }
     ],
     "client": [
       {
         "adapter": "kotlin",
-        "value": "juuxel.conjuration.Conjuration::initClient"
+        "value": "juuxel.enchanter.Enchanter::initClient"
       }
     ]
   },
   "mixins": [
-    "mixins.contemporary_conjuration.json"
+    "mixins.enchanters_experiments.json"
   ],
 
   "depends": {

@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "juuxel.conjuration.mixin",
+  "package": "juuxel.enchanter.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "LivingEntityMixin"

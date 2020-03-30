@@ -1,4 +1,4 @@
-package juuxel.conjuration.effect
+package juuxel.enchanter.effect
 
 import net.minecraft.entity.effect.StatusEffect
 import net.minecraft.entity.effect.StatusEffectType

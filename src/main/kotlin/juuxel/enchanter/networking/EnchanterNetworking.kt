@@ -1,7 +1,7 @@
-package juuxel.conjuration.networking
+package juuxel.enchanter.networking
 
 import io.netty.buffer.Unpooled
-import juuxel.conjuration.Conjuration
+import juuxel.enchanter.Enchanter
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry
@@ -10,11 +10,11 @@ import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.util.PacketByteBuf
 
-object ConjurationNetworking {
+object EnchanterNetworking {
     // x: Double
     // y: Double
     // z: Double
-    private val RESPAWN_WITH_INVULNERABILITY = Conjuration.id("respawn_with_invulnerability")
+    private val RESPAWN_WITH_INVULNERABILITY = Enchanter.id("respawn_with_invulnerability")
 
     fun sendRespawnWithInvulnerability(player: PlayerEntity, x: Double, y: Double, z: Double) {
         val buf = PacketByteBuf(Unpooled.buffer())

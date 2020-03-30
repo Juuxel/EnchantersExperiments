@@ -1,6 +1,6 @@
-package juuxel.conjuration.enchantment
+package juuxel.enchanter.enchantment
 
-import juuxel.conjuration.effect.ConjurationEffects
+import juuxel.enchanter.effect.EnchanterEffects
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.enchantment.EnchantmentTarget
 import net.minecraft.entity.EquipmentSlot
@@ -9,7 +9,7 @@ class FrostEnchantment : EffectEnchantment(
     Enchantment.Weight.UNCOMMON,
     EnchantmentTarget.WEAPON,
     arrayOf(EquipmentSlot.MAINHAND),
-    ConjurationEffects.FROST
+    EnchanterEffects.FROST
 ) {
     override fun isTreasure() = true
 }

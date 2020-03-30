@@ -1,6 +1,6 @@
-package juuxel.conjuration.enchantment
+package juuxel.enchanter.enchantment
 
-import juuxel.conjuration.util.seconds
+import juuxel.enchanter.util.seconds
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.enchantment.EnchantmentTarget
 import net.minecraft.entity.Entity
