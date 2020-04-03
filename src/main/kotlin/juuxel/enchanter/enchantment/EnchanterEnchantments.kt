@@ -20,8 +20,7 @@ object EnchanterEnchantments {
         Enchantment.Weight.UNCOMMON,
         EnchantmentTarget.WEAPON,
         arrayOf(EquipmentSlot.MAINHAND),
-        EnchanterEffects.FROST,
-        treasure = true
+        EnchanterEffects.FROST
     )
     @JvmField val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
     @JvmField val EFFICIENT_FARMING: Enchantment = EfficientFarmingEnchantment()
@@ -29,8 +28,7 @@ object EnchanterEnchantments {
         Enchantment.Weight.RARE,
         EnchantmentTarget.WEAPON,
         arrayOf(EquipmentSlot.MAINHAND),
-        StatusEffects.LEVITATION,
-        treasure = true
+        StatusEffects.LEVITATION
     )
 
     fun init() {

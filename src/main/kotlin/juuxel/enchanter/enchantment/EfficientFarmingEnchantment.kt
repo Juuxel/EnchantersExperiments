@@ -3,7 +3,6 @@ package juuxel.enchanter.enchantment
 import juuxel.enchanter.util.checkEnchantments
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
-import net.minecraft.enchantment.Enchantment
 import net.minecraft.enchantment.EnchantmentTarget
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.item.HoeItem
@@ -11,7 +10,7 @@ import net.minecraft.item.ItemStack
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
-class EfficientFarmingEnchantment : Enchantment(
+class EfficientFarmingEnchantment : BaseEnchantment(
     Weight.RARE,
     EnchantmentTarget.FISHING_ROD, // irritatered
     arrayOf(EquipmentSlot.MAINHAND)
