@@ -18,9 +18,10 @@ open class EffectEnchantment(
     weight: Weight,
     target: EnchantmentTarget,
     slotTypes: Array<out EquipmentSlot>,
-    private val effect: StatusEffect
+    private val effect: StatusEffect,
+    private val maximumLevel: Int = 1 // TODO: Bump to 3 when I figure out a better way to get these enchantments
 ) : BaseEnchantment(weight, target, slotTypes) {
-    override fun getMaximumLevel() = 3
+    override fun getMaximumLevel() = maximumLevel
 
     override fun differs(other: Enchantment): Boolean {
         return other !is EffectEnchantment
