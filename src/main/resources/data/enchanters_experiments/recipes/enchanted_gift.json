@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "WSW",
+    "WDW",
+    "WWW"
+  ],
+  "key": {
+    "W": { "tag": "minecraft:wool" },
+    "S": { "item": "minecraft:string" },
+    "D": { "item": "minecraft:diamond" }
+  },
+  "result": {
+    "item": "enchanters_experiments:enchanted_gift"
+  }
+}

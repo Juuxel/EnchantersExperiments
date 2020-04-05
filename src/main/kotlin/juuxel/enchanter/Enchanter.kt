@@ -1,5 +1,6 @@
 package juuxel.enchanter
 
+import juuxel.enchanter.block.EnchanterBlocks
 import juuxel.enchanter.effect.EnchanterEffects
 import juuxel.enchanter.enchantment.EnchanterEnchantments
 import juuxel.enchanter.networking.EnchanterNetworking
@@ -13,6 +14,7 @@ object Enchanter {
     fun id(path: String): Identifier = Identifier(ID, path)
 
     fun init() {
+        EnchanterBlocks.init()
         EnchanterEffects.init()
         EnchanterEnchantments.init()
         EnchanterNetworking.init()
@@ -20,6 +22,7 @@ object Enchanter {
 
     @Environment(EnvType.CLIENT)
     fun initClient() {
+        EnchanterBlocks.initClient()
         EnchanterNetworking.initClient()
     }
 }

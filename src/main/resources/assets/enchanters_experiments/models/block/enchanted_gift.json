@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "enchanters_experiments:block/enchanted_gift_bottom",
+    "top_bottom": "enchanters_experiments:block/enchanted_gift_bottom",
+    "side": "enchanters_experiments:block/enchanted_gift_side",
+    "decoration": "enchanters_experiments:block/enchanted_gift_top_decoration"
+  },
+  "elements": [
+    {
+      "from": [2, 0, 2],
+      "to": [14, 12, 14],
+      "faces": {
+        "down": { "texture": "#top_bottom", "cullface": "down" },
+        "up": { "texture": "#top_bottom" },
+        "north": { "texture": "#side" },
+        "east": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west": { "texture": "#side" }
+      }
+    },
+    {
+      "from": [4, 12, 8],
+      "to": [12, 16, 8],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": true },
+      "faces": {
+        "north": { "texture": "#decoration", "uv": [2, 0, 14, 4] },
+        "south": { "texture": "#decoration", "uv": [2, 0, 14, 4] }
+      }
+    },
+    {
+      "from": [8, 12, 4],
+      "to": [8, 16, 12],
+      "shade": false,
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": true },
+      "faces": {
+        "east": { "texture": "#decoration", "uv": [2, 0, 14, 4] },
+        "west": { "texture": "#decoration", "uv": [2, 0, 14, 4] }
+      }
+    }
+  ]
+}
