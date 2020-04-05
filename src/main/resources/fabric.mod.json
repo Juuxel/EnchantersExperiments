@@ -4,14 +4,9 @@
   "version": "${version}",
 
   "name": "Enchanter's Experiments",
-  "description": "TODO",
-  "contact": {
-    "sources": "https://github.com/Juuxel/EnchantersExperiments",
-    "issues": "https://github.com/Juuxel/EnchantersExperiments/issues"
-  },
+  "description": "Exciting enchantments wrapped in a gift!",
 
   "license": "LGPL-3.0-only",
-  "icon": "assets/enchanters_experiments/icon.png",
 
   "environment": "*",
   "entrypoints": {
