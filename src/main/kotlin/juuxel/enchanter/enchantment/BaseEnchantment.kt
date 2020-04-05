@@ -9,5 +9,5 @@ abstract class BaseEnchantment(
     target: EnchantmentTarget,
     slotTypes: Array<out EquipmentSlot>
 ) : Enchantment(weight, target, slotTypes) {
-    final override fun isTreasure() = true
+    final override fun isTreasure() = false // TODO: set to true
 }

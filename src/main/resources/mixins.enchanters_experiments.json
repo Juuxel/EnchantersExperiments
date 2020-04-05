@@ -4,10 +4,8 @@
   "package": "juuxel.enchanter.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "DefaultBiomeFeaturesMixin",
     "HoeItemMixin",
-    "LivingEntityMixin",
-    "LocateCommandAccessor"
+    "LivingEntityMixin"
   ],
   "client": [
     "client.InGameHudMixin"
