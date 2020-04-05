@@ -22,7 +22,7 @@ object EnchanterEnchantments {
         arrayOf(EquipmentSlot.MAINHAND),
         EnchanterEffects.FROST
     )
-    //@JvmField val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
+    // @JvmField val INVULNERABILITY: Enchantment = InvulnerabilityCurseEnchantment()
     @JvmField val EFFICIENT_FARMING: Enchantment = EfficientFarmingEnchantment()
     @JvmField val SHULKER: Enchantment = EffectEnchantment(
         Enchantment.Weight.RARE,
@@ -35,7 +35,7 @@ object EnchanterEnchantments {
         register("cobweb", COBWEB)
         register("swiftness", SWIFTNESS)
         register("frost", FROST)
-        //register("invulnerability", INVULNERABILITY)
+        // register("invulnerability", INVULNERABILITY)
         register("efficient_farming", EFFICIENT_FARMING)
         register("shulker", SHULKER)
     }
