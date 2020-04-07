@@ -4,6 +4,7 @@ import juuxel.enchanter.block.EnchanterBlocks
 import juuxel.enchanter.effect.EnchanterEffects
 import juuxel.enchanter.enchantment.EnchanterEnchantments
 import juuxel.enchanter.networking.EnchanterNetworking
+import juuxel.enchanter.world.feature.EnchanterFeatures
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.util.Identifier
@@ -18,6 +19,7 @@ object Enchanter {
         EnchanterEffects.init()
         EnchanterEnchantments.init()
         EnchanterNetworking.init()
+        EnchanterFeatures.init()
     }
 
     @Environment(EnvType.CLIENT)

@@ -5,8 +5,14 @@
 
   "name": "Enchanter's Experiments",
   "description": "Exciting enchantments wrapped in a gift!",
+  "authors": ["Juuz"],
 
   "license": "LGPL-3.0-only",
+  "contact": {
+    "homepage": "https://github.com/Juuxel/EnchantersExperiments",
+    "sources": "https://github.com/Juuxel/EnchantersExperiments",
+    "issues": "https://github.com/Juuxel/EnchantersExperiments/issues"
+  },
 
   "environment": "*",
   "entrypoints": {
